@@ -1,0 +1,14 @@
+<h1>Users List</h1>
+
+<div class="users-component">
+  <div class="card" *ngFor="let user of users" (click)="onUserClick(user)">
+    <img src="{{user.picture.large}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{user.name.title}}. {{user.name.first}}
+        {{user.name.last}}</h5>
+      <p class="card-text">{{user.location.street.number}}
+        {{user.location.street.name}},{{user.location.city}},{{user.location.state}} -
+        {{user.location.postcode}}</p>
+    </div>
+  </div>
+</div>
