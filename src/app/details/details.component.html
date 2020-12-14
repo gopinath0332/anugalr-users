@@ -12,7 +12,7 @@
               <img src="{{detail.picture.large}}" alt="Admin" class="rounded-circle" width="150">
               <div class="mt-3">
                 <h4>{{detail.name.first | uppercase}}</h4>
-                <p class="text-secondary mb-1">{{detail.email}}</p>
+                <p [appHightLight]="color" class="text-secondary mb-1">{{detail.email}}</p>
                 <p class="text-muted font-size-sm">{{detail.location.city}}, {{detail.location.state}}</p>
                 <button class="btn btn-primary">Follow</button>
                 <button class="btn btn-outline-primary">Message</button>

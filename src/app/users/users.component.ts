@@ -9,6 +9,7 @@ import { UsersService } from "./users.service";
 })
 export class UsersComponent implements OnInit {
   users = [];
+  value = "";
 
   constructor(private userService: UsersService, private router: Router) {
     this.userService.getAllUsers().subscribe(data => {
@@ -20,6 +21,7 @@ export class UsersComponent implements OnInit {
   }
 
   onUserClick(user) {
+    console.log("value --", this.value);
     this.userService.selectedUser = user;
     this.router.navigate(["/detail"]);
   }

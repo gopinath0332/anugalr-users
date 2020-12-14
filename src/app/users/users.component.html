@@ -1,5 +1,6 @@
 <h1>Users List</h1>
-
+<input type="text" class="form-control" [(ngModel)]="value">
+<div>{{value}}</div>
 <div class="users-component">
   <div class="card" *ngFor="let user of users" (click)="onUserClick(user)">
     <img src="{{user.picture.large}}" class="card-img-top">
